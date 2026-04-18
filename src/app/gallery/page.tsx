@@ -7,7 +7,7 @@ export async function generateMetadata() {
     title: gallery.title,
     description: gallery.description,
     baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(gallery.title)}`,
+    image: `/images/og/about.png`,
     path: gallery.path,
   });
 }
