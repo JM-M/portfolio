@@ -1,0 +1,35 @@
+---
+title: "Vesslr - B2B Trade Platform"
+publishedAt: "2026-04-04"
+summary: "A platform that helps businesses in the oil and gas industry trade with confidence, with built-in compliance, escrow, and workflows designed around how deals actually happen."
+images:
+  - "/images/projects/vesslr/dashboard.png"
+team:
+  - name: "Michael Jola-Moses"
+    role: "Full-Stack Engineer"
+    avatar: "/images/me.png"
+    linkedIn: "https://www.linkedin.com/in/michael-jola-moses/"
+---
+
+## The problem
+
+In oil and gas trading, deals involve large sums, multiple parties, and layers of regulatory requirements. Traditionally, this plays out through personal relationships, scattered documents, and a lot of trust. There's no neutral layer between buyer and seller. Payments are disconnected from fulfillment. And when something goes wrong, there's no clear record of who did what.
+
+Vesslr needed to be that neutral layer: a platform where businesses can trade confidently, knowing that compliance is handled, funds are protected, and every action is on record.
+
+## How I approached it
+
+The core challenge was designing a transaction system that could handle the full lifecycle of a trade, from the initial request through document verification, escrow, logistics, delivery, and settlement, while keeping the experience clear for each role involved.
+
+**A three-phase transaction model.** Rather than treating a trade as a single event, I broke it into three stages: Request (what a buyer needs), Order (both parties agree on terms), and Transaction (the actual execution). Each stage has its own rules, permissions, and status flow. This gave the platform a clear structure that maps to how these deals work in practice.
+
+**Compliance as a first-class concept.** Instead of bolting document checks onto the workflow as an afterthought, I built a flexible document slot system. Each transaction type defines what documents are required, from whom, and at which stage. Mandatory documents gate state transitions, so a deal can't move forward until compliance is satisfied. Different categories (crude oil vs. equipment leasing vs. logistics services) have different requirements, and the system adapts without code changes.
+
+**Escrow and payment handling.** Funds go into escrow when a deal begins and only release when delivery is confirmed and approved. I built the payment layer as an abstraction over providers like Providus and Flutterwave, so the platform isn't locked into a single processor. For service-based deals, the system supports milestone payouts.
+
+**Role-aware access throughout.** Buyers, sellers, and admins each see what's relevant to them and nothing more. The platform mediates all interaction between parties, so trading partners never communicate directly. This protects both sides and keeps the platform central to the relationship.
+
+
+## Where it landed
+
+The platform gives oil and gas businesses a structured, secure way to trade. Every transaction has a full audit trail, funds are protected through escrow, and compliance is woven into the process rather than tacked on at the end. It's the kind of system where both the operations team and the compliance team can look at the same workflow and see what they need.

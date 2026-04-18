@@ -1,0 +1,36 @@
+---
+title: "Oblee - Commerce Marketplace"
+publishedAt: "2026-04-03"
+summary: "A marketplace platform where small businesses can set up their own online store, manage products, and start selling, without needing to build anything from scratch."
+images:
+  - "/images/projects/oblee/hero.png"
+  - "/images/projects/oblee/hero-dark.png"
+team:
+  - name: "Michael Jola-Moses"
+    role: "Full-Stack Engineer"
+    avatar: "/images/me.png"
+    linkedIn: "https://www.linkedin.com/in/michael-jola-moses/"
+---
+
+## The problem
+
+Most small businesses in Nigeria sell through Instagram, WhatsApp, and DMs. They juggle orders across chat threads, track payments manually, and have no real storefront. The tools that do exist are either too expensive, too rigid, or built for markets with very different infrastructure.
+
+Oblee needed to give these vendors a professional online presence with real commerce features (inventory, payments, shipping, analytics) without requiring them to be technical or to build anything from scratch.
+
+## How I approached it
+
+The challenge was building a platform that could serve many vendors at once, each with their own storefront and branding, while sharing the same underlying infrastructure for payments, logistics, and content management.
+
+**Subdomain-based multi-tenancy.** Each vendor gets their own subdomain and a storefront that feels like their own site. Behind the scenes, a middleware layer resolves the subdomain to the right store context and routes everything through a shared backend. Vendors don't share data, but they share infrastructure, which keeps costs down and the experience consistent.
+
+**A template system for storefronts.** Rather than giving every vendor the same generic layout, I built a template system where different store types (restaurants, fashion, retail) get a storefront designed for how their customers shop. Each store is assigned a template at setup, and the frontend loads the right one based on the store config.
+
+**Commerce, content, and visual editing in one stack.** The platform combines MedusaJS for core commerce (products, inventory, pricing, orders), PayloadCMS for rich content (product descriptions, landing pages, SEO), and Puck for visual page building. This means vendors can manage their catalogue in one place and build marketing pages without touching code, while the commerce engine handles the transactional side.
+
+**Payments and shipping built for the market.** I integrated Paystack for payments and Terminal Africa for logistics, both built for the Nigerian market. Shipping rates are calculated in real time, and the checkout flow handles address validation and delivery estimates before the customer pays.
+
+
+## Where it landed
+
+Vendors can go from signup to a working online store without writing a line of code. They get a branded storefront, product management, order tracking, discount tools, and analytics, all backed by payment and shipping infrastructure that actually works in their market.

@@ -1,0 +1,37 @@
+---
+title: "VaultView - Local Media Browser"
+publishedAt: "2026-04-02"
+summary: "A Chrome extension that lets you pick a folder on your computer and instantly browse thousands of photos, videos, and audio files, all without leaving the browser."
+images:
+  - "/images/projects/vaultview/folder.png"
+team:
+  - name: "Michael Jola-Moses"
+    role: "Full-Stack Engineer"
+    avatar: "/images/me.png"
+    linkedIn: "https://www.linkedin.com/in/michael-jola-moses/"
+---
+
+## The problem
+
+I had thousands of media files scattered across folders and no good way to browse them. The default file explorer shows filenames and tiny icons, and every media viewer I tried was either slow, cloud-dependent, or required importing everything into a library. I just wanted to point at a folder and see everything in it, fast.
+
+## How I approached it
+
+The goal was simple: pick a folder, see all your media, interact with it. The challenge was making that work smoothly at scale (10,000+ files) inside a browser extension, without any server or cloud dependency.
+
+**Scanning that stays out of the way.** When you select a folder, VaultView walks through it and indexes every supported file (images, video, audio). The scan runs in batches so the interface stays responsive while it works. If you come back later and files have changed, an incremental re-scan picks up the difference without starting over.
+
+**Thumbnails generated in the background.** Images get thumbnails through a Web Worker using OffscreenCanvas, so the main thread never freezes. Video thumbnails are captured from a representative frame. I added concurrency limits (four images, two videos at a time) to avoid overwhelming the system, and a two-layer cache (persistent blob storage plus an in-memory LRU) keeps things fast on repeat visits without eating up memory.
+
+**A grid that handles scale.** The media grid uses virtualized rendering, which means only the rows currently on screen are in the DOM. You can scroll through thousands of items and the interface stays smooth. Thumbnails load as rows come into view, backed by the LRU cache so recently viewed items appear instantly.
+
+**Built-in viewers.** Clicking any file opens it in a viewer without leaving the extension. Images support zoom and pan, videos have speed controls, and audio plays inline. No context switching, no external apps.
+
+**Search that feels instant.** An inverted index runs in a separate Web Worker, so searching across 10,000 files returns results in under 50 milliseconds. It supports prefix matching, so you start seeing results as you type.
+
+**Everything stays local.** No accounts, no cloud, no tracking. All processing happens on your machine. File handles are stored in IndexedDB so you can reopen a folder without re-selecting it.
+
+
+## Where it landed
+
+What started as a personal tool turned into something I use daily. It's a fast, private way to browse and find media files that doesn't require installing a heavy app or uploading anything to the cloud.
