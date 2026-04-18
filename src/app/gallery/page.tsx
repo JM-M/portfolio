@@ -7,7 +7,7 @@ export async function generateMetadata() {
     title: gallery.title,
     description: gallery.description,
     baseURL: baseURL,
-    image: `/images/og/about.png`,
+    image: `/images/og/about.jpg`,
     path: gallery.path,
   });
 }

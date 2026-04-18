@@ -48,7 +48,7 @@ export async function generateMetadata({
     title: post.metadata.title,
     description: post.metadata.summary,
     baseURL: baseURL,
-    image: `/images/og/about.png`,
+    image: `/images/og/about.jpg`,
     path: `${blog.path}/${post.slug}`,
   });
 }

@@ -8,7 +8,7 @@ export async function generateMetadata() {
     title: blog.title,
     description: blog.description,
     baseURL: baseURL,
-    image: `/images/og/about.png`,
+    image: `/images/og/about.jpg`,
     path: blog.path,
   });
 }
