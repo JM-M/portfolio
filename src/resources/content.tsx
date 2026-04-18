@@ -1,4 +1,13 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import {
+  About,
+  Blog,
+  Gallery,
+  Home,
+  Newsletter,
+  Person,
+  Social,
+  Work,
+} from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -53,9 +62,9 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Michael, a full-stack engineer who turns messy real-world problems into
-      clean, reliable software. I've built trade platforms, marketplaces, and tools
-      that teams actually depend on every day.
+      I'm Michael, a full-stack engineer who turns messy real-world problems
+      into clean, reliable software. I've built trade platforms, marketplaces,
+      and tools that businesses actually depend on every day.
     </>
   ),
 };
@@ -81,11 +90,11 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        I'm a full-stack engineer who cares about how things work end to end, from
-        what users see and interact with to the systems running behind the scenes.
-        I've worked on trade platforms, marketplaces, investment tools, and internal
-        dashboards, and I'm most useful when the problem is complex and the
-        solution needs to be simple.
+        I'm a full-stack engineer who cares about how things work end to end,
+        from what users see and interact with to the systems running behind the
+        scenes. I've worked on trade platforms, marketplaces, investment tools,
+        and internal dashboards, and I'm most useful when the problem is complex
+        and the solution needs to be simple.
       </>
     ),
   },
@@ -107,8 +116,9 @@ const about: About = {
             work within the platform without stepping on each other.
           </>,
           <>
-            Worked closely with the product team to make sense of complex regulatory
-            requirements and ship solutions that actually worked in practice.
+            Worked closely with the product team to make sense of complex
+            regulatory requirements and ship solutions that actually worked in
+            practice.
           </>,
         ],
         images: [],
@@ -119,13 +129,13 @@ const about: About = {
         role: "Frontend Engineer",
         achievements: [
           <>
-            Led a major overhaul of a real-estate investment platform, modernizing
-            the frontend, improving load times, and making the codebase easier to
-            work with long-term.
+            Led a major overhaul of a real-estate investment platform,
+            modernizing the frontend, improving load times, and making the
+            codebase easier to work with long-term.
           </>,
           <>
-            Worked across teams to make sure the frontend kept pace with changing
-            business and compliance needs.
+            Worked across teams to make sure the frontend kept pace with
+            changing business and compliance needs.
           </>,
           <>
             Documented key decisions and migration steps so the team could
@@ -140,14 +150,14 @@ const about: About = {
         role: "Frontend Engineer",
         achievements: [
           <>
-            Built an internal dashboard that gave the team real-time insight into
-            sales, customer activity, and order fulfillment. It replaced scattered
-            spreadsheets and manual reports.
+            Built an internal dashboard that gave the team real-time insight
+            into sales, customer activity, and order fulfillment. It replaced
+            scattered spreadsheets and manual reports.
           </>,
           <>
             Pulled data from multiple services into a single view tailored to
-            each team member's role, making day-to-day decisions faster and
-            more reliable.
+            each team member's role, making day-to-day decisions faster and more
+            reliable.
           </>,
           <>
             Designed the APIs that power the dashboard, with proper access
@@ -171,8 +181,8 @@ const about: About = {
             confidence with Python.
           </>,
           <>
-            Helped students go from struggling with basics to completing
-            real projects on their own.
+            Helped students go from struggling with basics to completing real
+            projects on their own.
           </>,
         ],
         images: [],
@@ -189,7 +199,12 @@ const about: About = {
       },
       {
         name: "Applied Data Institute",
-        description: <>Fellowship focused on using data and analytics to solve real-world problems.</>,
+        description: (
+          <>
+            Fellowship focused on using data and analytics to solve real-world
+            problems.
+          </>
+        ),
       },
     ],
   },
@@ -199,7 +214,12 @@ const about: About = {
     skills: [
       {
         title: "Languages",
-        description: <>The languages I reach for most, whether I'm building interfaces or writing backend logic.</>,
+        description: (
+          <>
+            The languages I reach for most, whether I'm building interfaces or
+            writing backend logic.
+          </>
+        ),
         tags: [
           { name: "TypeScript", icon: "typescript" },
           { name: "Python", icon: "python" },
@@ -208,7 +228,12 @@ const about: About = {
       },
       {
         title: "Frontend",
-        description: <>Where I spend most of my time. Making things look right, feel fast, and hold up as they grow.</>,
+        description: (
+          <>
+            Where I spend most of my time. Making things look right, feel fast,
+            and hold up as they grow.
+          </>
+        ),
         tags: [
           { name: "React", icon: "react" },
           { name: "Next.js", icon: "nextjs" },
@@ -220,7 +245,12 @@ const about: About = {
       },
       {
         title: "Backend",
-        description: <>I build the APIs and services that keep everything running behind the scenes.</>,
+        description: (
+          <>
+            I build the APIs and services that keep everything running behind
+            the scenes.
+          </>
+        ),
         tags: [
           { name: "NestJS", icon: "nestjs" },
           { name: "Express", icon: "express" },
@@ -229,7 +259,12 @@ const about: About = {
       },
       {
         title: "Databases",
-        description: <>Comfortable working with both relational and document databases depending on what the project needs.</>,
+        description: (
+          <>
+            Comfortable working with both relational and document databases
+            depending on what the project needs.
+          </>
+        ),
         tags: [
           { name: "PostgreSQL", icon: "postgresql" },
           { name: "MySQL", icon: "mysql" },
